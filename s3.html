@@ -14,12 +14,16 @@
   </a>
 
   <br><br>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file" />
+    <button type="submit">Upload File</button>
+  </form>
 
-  <!-- Or use JavaScript to fetch and display the file -->
-  <!-- <img id="image" src="" alt="Image from S3" />
+  <!--Or use JavaScript to fetch and display the file -->
+  <img id="image" src="" alt="Image from S3" />
   <script>
-    const imageUrl = "http://localhost:3000/vacations/vacation2.jpg"; // Replace with your S3 file key
+    const imageUrl = "http://localhost:3000/vacations/vacation2.jpg"; 
     document.getElementById('image').src = imageUrl;
-  </script> -->
+  </script>
 </body>
 </html>
