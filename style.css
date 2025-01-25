@@ -1,0 +1,11 @@
+body {
+    background-color: rgb(235, 222, 206);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+h1 {
+    transform: translate(35%, 0%);
+}
