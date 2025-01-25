@@ -6,6 +6,16 @@ body {
     transform: translate(-50%, -60%);
 }
 
-h1 {
-    transform: translate(35%, 0%);
+#profile {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#profile img {
+    border-radius: 50%;
+}
+
+#g_id_onload {
+    margin-top: 50px;
+    text-align: center;
 }
