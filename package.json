@@ -1,0 +1,16 @@
+{
+  "name": "irvinehacks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "type": "module",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "punycode": "^2.3.1"
+  }
+}
