@@ -29,7 +29,7 @@ textarea:not([rows]) {
 }
   
 body {
-    background-image: url(./assets/computer.png);
+    background-image: url(./assets/aipagebackground.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: contain;
