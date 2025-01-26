@@ -45,3 +45,6 @@ function sendMessage() {
     textarea.focus();
 }
 
+function goBackToMain() {
+    window.location.href = 'index.html';
+}

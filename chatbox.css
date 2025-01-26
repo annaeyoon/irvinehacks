@@ -118,3 +118,17 @@ body {
     margin: auto;
 }
 
+.back-button {
+    background-color: aqua;
+    height: 20px;
+    width: 20px;
+    top: 30%;
+    left: 50%;
+}
+
+.back-button button {
+    height: inherit;
+    width: inherit;
+    background-color: transparent;
+    /* border: none; */
+}
