@@ -1,62 +1,14 @@
 body {
     background-color: rgb(165, 154, 142);
-    top: 50%;
-    left: 50%;
+    display:flex;
+    align-items:center;
 }
 
-#book {
-    position: absolute;
-    width: 90vw;
-    height: 85vh;
-    border-radius: 25px;
-    background-color: rgb(85, 62, 52);
-    transform: translate(5%, 9%);
+.full-screen-image {
+    position:absolute;
+    height: 100%;
+    width: auto;
+    object-fit: cover; 
+    justify-content:center;
+    margin-left: 15vh;
 }
-
-.pages {
-    position: relative;
-    width: 82vw;
-    height: 75vh;
-    border-radius: 10px;
-    background-color: rgb(233, 230, 225);
-    transform: translate(5%, 6%);
-    z-index: 1;
-    perspective: 1000;
-}
-
-/* animation here */
-.pages:active .page {
-    transform: rotateY(180deg);
-}
-
-.pages:active .page#left {
-    transform: rotateY(180deg);
-    background-color: rgb(139, 105, 37);
-}
-
-.page {
-    transform-style: preserve-3d;
-    transition: all 1.0s linear;
-}
-
-#right {
-    position: absolute;
-    width: 41vw;
-    height: 75vh;
-    border-radius: 0 10px 10px 0;
-    background-color: rgb(240, 238, 234);
-    transform: translate(100%, 0%);
-    backface-visibility: hidden;
-}
-
-#left {
-    position: absolute;
-    width: 41vw;
-    height: 75vh;
-    border-radius: 10px 0 0 10px;
-    /* background-color: rgb(139, 105, 37); */
-    backface-visibility: hidden;
-    /* display: none; */
-    /* display: block; */
-}
-
