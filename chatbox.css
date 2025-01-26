@@ -27,6 +27,10 @@ textarea:not([rows]) {
 :target {
     scroll-margin-block: 5ex;
 }
+
+html {
+    scrollbar-gutter: stable;
+}
   
 body {
     background-image: url(./assets/aipagebackground.png);
@@ -58,15 +62,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    width: 0;
 }
 
 .chatbox-container:hover {
@@ -126,6 +122,8 @@ body {
     margin: auto;
     font-size: 16px; 
     padding-left: 6px;
+    border-radius: 2px;
+    border: 3px solid black;
 }
 .chat-input-submit {
     display: inline-block;
