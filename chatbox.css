@@ -54,6 +54,22 @@ body {
     max-height: 200px;
     width: 400px;
     display: block;
+    overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.chatbox-container:hover {
     overflow-y: auto;
 }
 
