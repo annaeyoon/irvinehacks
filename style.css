@@ -22,30 +22,30 @@ body {
     z-index: 1;
     transition: transform 0.3s ease;
     opacity: 95%;
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
 #initial-laptop:hover {
     transform: scale(1.03);
     opacity: 100%;
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
 #initial-book {
     position:absolute;
     height: 55%;
-    bottom: 3%;
+    bottom: 5%;
     right: 42%;
     z-index: 1;
     transition: transform 0.3s ease;
     opacity: 95%;
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
 #initial-book:hover {
     transform: scale(1.03);
     opacity: 100%;
-    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
 
@@ -57,13 +57,13 @@ body {
     z-index: 1;
     transition: transform 0.3s ease;
     opacity: 95%;
-    filter: drop-shadow(4px 4px 10px rgba(71, 40, 86, 0.5));
+    filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 
 }
 
 #initial-ipod:hover {
     transform: scale(1.03);
     opacity: 100%;
-    filter: drop-shadow(4px 4px 10px rgba(84, 39, 103, 0.5));
+    filter: drop-shadow(4px 4px 10px rgba(49, 1, 12, 0.5));
 }
 
