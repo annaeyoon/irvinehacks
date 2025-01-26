@@ -1,0 +1,15 @@
+body {
+    background-color: #B19970;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+#full-screen-scrapbook {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: auto;
+    object-fit: cover; 
+}
