@@ -3,11 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Display</title>
+  <title>Usernames List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      padding: 8px;
+      margin: 5px 0;
+      background-color: #f4f4f4;
+      border-radius: 5px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Display Image from MySQL</h1>
-  <img src="/image/1" alt="Image" style="width: 200px; height: auto;" /> <!-- Replace 1 with the image ID from your database -->
-  <img src="/image/2" alt="Image" style="width: 500px; height: auto;" />
+
+  <h1>Usernames</h1>
+  <ul id="usernames-list">
+    <!-- Usernames will be dynamically inserted here -->
+  </ul>
+
+  <script>
+    // Fetch usernames from the server
+    fetch('/users')
+      .then(response => response.json())
+      .then(data => {
+        const usernamesList = document.getElementById('usernames-list');
+        
+        // Clear any existing content
+        usernamesList.innerHTML = '';
+        
+        // Iterate through the data and create list items
+        data.forEach(user => {
+          const li = document.createElement('li');
+          li.textContent = user.username;
+          usernamesList.appendChild(li);
+        });
+      })
+      .catch(error => {
+        console.error('Error fetching usernames:', error);
+      });
+  </script>
+
 </body>
 </html>

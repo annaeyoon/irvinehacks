@@ -11,10 +11,10 @@ const app = express();
 
 // Setup MySQL connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'test_user',        // your MySQL username
-  password: 'testpassword', // your MySQL password
-  database: 'testdb'        // your database name
+  host: 'database-irvine.cn2ymqgeihdj.us-east-1.rds.amazonaws.com',
+  user: 'admin',        // your MySQL username
+  password: 'adminpw!', // your MySQL password
+  database: 'irvinedb'        // your database name
 });
 
 // Connect to MySQL
@@ -25,44 +25,23 @@ db.connect(err => {
   }
   console.log('Connected to the MySQL database');
 });
-// Route to serve the index.html file
+
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'images.html'));
 });
 
-// Route to serve images
-app.get('/image/:id', (req, res) => {
-  const id = req.params.id;
-
-  // Query to get image from database
-  db.query('SELECT file_data, filename FROM files WHERE id = ?', [id], (err, results) => {
+// Route to serve the index.html file
+app.get('/users', (req, res) => {
+  // Query the users table to get usernames
+  db.query('SELECT username FROM users', (err, results) => {
     if (err) {
-      console.log('Error retrieving image:', err);
-      return res.status(500).send('Server Error');
+      console.log('Error querying database:', err);
+      res.status(500).send('Error retrieving data');
+      return;
     }
 
-    if (results.length > 0) {
-      const fileData = results[0].file_data;
-      const filename = results[0].filename;
-      const ext = path.extname(filename).toLowerCase();
-
-      // Determine the content-type based on file extension
-      let contentType = 'application/octet-stream'; // Default type
-
-      if (ext === '.jpg' || ext === '.jpeg') {
-        contentType = 'image/jpeg';
-      } else if (ext === '.png') {
-        contentType = 'image/png';
-      } else if (ext === '.gif') {
-        contentType = 'image/gif';
-      }
-
-      // Send the image as a response with the appropriate content type
-      res.setHeader('Content-Type', contentType);
-      res.send(fileData);
-    } else {
-      res.status(404).send('Image not found');
-    }
+    // Send the list of usernames as a response
+    res.json(results);
   });
 });
 
