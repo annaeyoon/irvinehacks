@@ -3,6 +3,7 @@ body {
     display: flex;
     margin: 0;
     padding: 0;
+    cursor: url(https://cur.cursors-4u.net/others/oth-5/oth510.png), auto !important;
 }
 
 #full-screen-scrapbook {
@@ -12,4 +13,73 @@ body {
     top: 0;
     width: auto;
     object-fit: cover; 
+    z-index:0;
+}
+
+#polaroid-one {
+    left: 13%;
+    top: 10%;
+}
+
+#polaroid-two {
+    right: 43%;
+    top: 10%;
+}
+
+#polaroid-three {
+    left: 22%;
+    top: 50%;
+    height:38%;
+}
+
+#polaroid-four {
+    right: 40%;
+    top: 50%;
+}
+
+.polaroid {
+    position:absolute;
+    height: 34%;
+    z-index: 1;
+    transition: transform 0.3s ease, filter 1s ease;;
+    opacity: 95%;
+}
+    
+.polaroid:hover {
+    transform: scale(1.03);
+    opacity: 100%;
+    filter: drop-shadow(4px 4px 10px rgba(84, 39, 103, 0.5));
+}
+
+input[type="text"], textarea {
+    width: 10%; /* Makes the text box take up full width */
+    border: 0px dotted #2a0d2b;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 5;
+    background: transparent;
+    left: 30%;
+    top: 20%;
+    min-height: 150px;
+    font-family: 'Pangolin', serif;
+    letter-spacing: 1.2px;
+    line-height: 15px;
+}
+
+#pen {
+    position:absolute;
+    height: 100%;
+    z-index: 1;
+    right: 5%;
+    transition: transform 0.3s ease, filter 1s ease;;
+    opacity: 95%;
+}
+
+#pencil {
+    position:absolute;
+    height:  100%;
+    right: 0%;
+    z-index: 1;
+    transition: transform 0.3s ease, filter 1s ease;;
+    opacity: 95%;
 }
